@@ -1,5 +1,5 @@
 ## This is a pair of functions that cache the inverse of a matrix
-## Assumption: The matrix supplied is always invertible!
+## Assumption: The matrix supplied is always invertible.
 
 
 ## This function creates a special matrix object that can cache its inverse
@@ -28,7 +28,7 @@ cacheSolve <- function(x, ...) {
         m <- x$getinverse()
         if(!is.null(m)) {
                 message("getting cached data")
-                return(m)
+                return(m)      ## Returns cached matrix
         }
         data <- x$get()
         m <- solve(data, ...)
